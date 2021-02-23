@@ -1,0 +1,15 @@
+.eslogan{
+    width: 100%;
+    text-align: center;
+    h1{
+        font-size: 52px;
+        font-family: 'Roboto', sans-serif;
+        color: $titulos;
+        font-weight: bold;  
+    }
+    p{
+        font-size: 36px;
+        color: $colorPrincipal;
+        font-weight: bold;
+    }
+}
