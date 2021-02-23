@@ -1,0 +1,86 @@
+header{
+    width: 100%;
+    height: 110px;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    nav{    
+        width: 80%;
+        margin: auto;
+        @include flex(row, nowrap, space-between, center);
+        .logo{
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .navBar__opciones{
+            color: #D8D0D0;
+            width: 50%;
+            /* ">" indicar de elementos "hijos" directo del contenedor padre*/
+            >ul{
+                @include flex(row, nowrap, space-between, center);
+                width: 100%;
+                position: relative;
+                li{
+                    cursor: pointer;
+                    &:hover{
+                        color: $colorSecundario;
+                        text-shadow: 1px 1px 1px rgba($color: #000000, $alpha: 0.4);
+                    }
+                }
+                .dropdonw{
+                    span{
+                        margin-right: 2px;
+                    }
+                }
+                .dropdonwOpciones{
+                    position: absolute;
+                    width: 35%;
+                }
+                ul{
+                    padding: 5px;
+                    background-color: $colorPrincipal;
+                    border-radius: 6px;
+                    li{
+                        padding: 10px 5px;
+                        border-radius: 6px;
+                        margin-top: 4px;
+                        transition: all 0.3s ease;
+                        cursor: pointer;
+                        a{
+                            color: $colorSecundario;
+                            font-size: 20px;
+                            font-weight: normal;
+                            transition: all 0.3s ease;
+                            &:hover{
+                                border: none;
+                                box-shadow: none;
+                            }
+                        }
+                        &:hover{
+                            background-color: $colorSecundario;
+                            box-shadow: 2px 1px 1px $titulos;
+                            transform: scale(1.05);
+                            transition: all 0.3s ease;
+                            a{
+                                color: $colorPrincipal;
+                                font-weight: bold;
+                                transition: all 0.3s ease;
+                            }
+                        }
+                    }
+                }
+                .block{
+                    display: none;
+                }
+            }
+             
+        }
+            
+    }
+    
+}

@@ -1,0 +1,11 @@
+%titulosSecciones{
+    text-align: center;
+    margin-top: 30px;
+    color: red;
+    font-weight: bold;
+    font-size: 48px;
+    cursor: pointer;
+    @media (max-width: 768px) {
+        font-size: 28px;
+    }
+}

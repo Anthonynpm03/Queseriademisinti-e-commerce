@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  height: 110px;
+  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+header nav {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .logo {
+  cursor: pointer;
+  margin-top: 5px;
+}
+header nav .navBar__opciones {
+  color: #D8D0D0;
+  width: 50%;
+  /* ">" indicar de elementos "hijos" directo del contenedor padre*/
+}
+header nav .navBar__opciones > ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+header nav .navBar__opciones > ul li {
+  cursor: pointer;
+}
+header nav .navBar__opciones > ul li:hover {
+  color: #ffffff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+header nav .navBar__opciones > ul .dropdonw span {
+  margin-right: 2px;
+}
+header nav .navBar__opciones > ul .dropdonwOpciones {
+  position: absolute;
+  width: 35%;
+}
+header nav .navBar__opciones > ul ul {
+  padding: 5px;
+  background-color: #0D0C0C;
+  border-radius: 6px;
+}
+header nav .navBar__opciones > ul ul li {
+  padding: 10px 5px;
+  border-radius: 6px;
+  margin-top: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+header nav .navBar__opciones > ul ul li a {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: normal;
+  transition: all 0.3s ease;
+}
+header nav .navBar__opciones > ul ul li a:hover {
+  border: none;
+  box-shadow: none;
+}
+header nav .navBar__opciones > ul ul li:hover {
+  background-color: #ffffff;
+  box-shadow: 2px 1px 1px #a00f0f;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+header nav .navBar__opciones > ul ul li:hover a {
+  color: #0D0C0C;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+header nav .navBar__opciones > ul .block {
+  display: none;
+}
+
+.slideshowConteiner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 80vh;
+}
+.slideshowConteiner #slideshow {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+.slideshowConteiner #slideshow img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.slideshowConteiner #slideshow #img2 {
+  left: 100%;
+}
+.slideshowConteiner #slideshow .active {
+  left: 0 !important;
+  transition: all 1s ease;
+}
+.slideshowConteiner #slideshow .capaImgBanner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
+}
+.slideshowConteiner #indicadores {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  z-index: 3;
+}
+.slideshowConteiner #indicadores .circles {
+  border: 2px solid #ffffff;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin: 0 5px 5px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+.slideshowConteiner #indicadores .resaltado {
+  background-color: #a00f0f;
+  transition: background-color 0.8s;
+}
+.slideshowConteiner .slidesshow__button {
+  text-align: center;
+  position: absolute;
+  z-index: 3;
+  bottom: 15%;
+  right: 20px;
+  padding: 5px 15px;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.slideshowConteiner .slidesshow__button:hover {
+  background-color: #a00f0f;
+}
+.slideshowConteiner .slidesshow__button h1 {
+  color: #ffffff;
+}
