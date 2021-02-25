@@ -2,7 +2,7 @@ header{
     width: 95%;
     height: 110px;
     position: absolute;
-    position: fixed;
+    // position: fixed;
     top: 0;
     left: 0;
     z-index: 4;
@@ -50,13 +50,13 @@ header{
                         padding: 10px 5px;
                         border-radius: 6px;
                         margin-top: 4px;
-                        transition: all 0.3s ease;
+                        transition: all 0.1s ease;
                         cursor: pointer;
                         a{
                             color: $colorSecundario;
                             font-size: 20px;
                             font-weight: normal;
-                            transition: all 0.3s ease;
+                            transition: all 0.1s ease;
                             &:hover{
                                 border: none;
                                 box-shadow: none;
@@ -66,11 +66,11 @@ header{
                             background-color: $colorSecundario;
                             box-shadow: 2px 1px 1px $titulos;
                             transform: scale(1.05);
-                            transition: all 0.3s ease;
+                            transition: all 0.1s ease;
                             a{
                                 color: $colorPrincipal;
                                 font-weight: bold;
-                                transition: all 0.3s ease;
+                                transition: all 0.1s ease;
                             }
                         }
                     }

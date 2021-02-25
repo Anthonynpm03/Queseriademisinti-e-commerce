@@ -1,0 +1,77 @@
+.categorias{
+    width: 90%;
+    margin: auto;
+    h2{
+        text-align: center;
+        font-size: 40px;
+    }
+    .categoriasCardsConteiner{
+        width: 100%;
+        @include flex(column, wrap, center, center);
+        .categoriasCards__sup{
+            width: 100%;
+            @include flex(row, wrap, space-evenly, center);
+            padding: 10px 0px;
+        }
+        .categoriasCards__med{
+            width: 100%;
+            height: 250px;
+            padding-top: 20px;
+            background-image: url(../images/categorias/categorias3.jpg);
+            @include BgImage(cover, center, no-repeat);
+            @include flex(column, nowrap, center, flex-end);
+            padding: 40px 20px 0px 0px;
+            h3{
+                font-size: 30px;
+                font-weight: bold;
+                color: $colorSecundario;
+                margin-bottom: 10px;
+            }
+            p{
+                font-size: 18px;
+                color: $colorSecundario;
+            }
+        }
+        .categoriasCards__inf{
+            width: 100%;
+            @include flex(row, wrap, space-evenly, center);
+            padding: 10px 0px;
+        }
+        .categoriasCards{
+            width: 48%;
+            height: 200px;
+            border-radius: 12px;
+            padding-top: 20px;
+            font-size: 28px;
+            color: $colorSecundario;
+            @include BgImage(cover, center, no-repeat);
+        }
+        .categoriasCards__sup--izq{
+            background-image: url(../images/categorias/categorias1.jpg);
+            @include flex(column, nowrap, center, flex-start);
+            padding-left: 60px;
+        }
+        .categoriasCards__sup--der{
+            background-image: url(../images/categorias/categorias2.jpg);
+            @include flex(column, nowrap, center, flex-end);
+            padding-right: 60px;
+        }
+        .categoriasCards__inf--izq{
+            background-image: url(../images/categorias/categorias5.jpg);
+            @include flex(column, nowrap, flex-end, flex-start);
+            padding: 0;
+            h3{
+                width: 30%;
+                height: 100%;
+                background-color: black;
+                text-align: center;
+                line-height: 200px;
+            }
+        }
+        .categoriasCards__inf--der{
+            background-image: url(../images/categorias/categorias4.jpg);
+            @include flex(column, nowrap, center, flex-end);
+            padding-right: 60px;
+        }
+    }
+}
