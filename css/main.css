@@ -13,9 +13,8 @@ ul {
 }
 
 header {
-  width: 95%;
-  height: 110px;
-  position: absolute;
+  width: 100%;
+  height: 80px;
   position: fixed;
   top: 0;
   left: 0;
@@ -28,6 +27,7 @@ header {
   flex-wrap: nowrap;
   justify-content: flex-end;
   align-items: center;
+  transition: top 0.2s ease;
 }
 header nav {
   width: 85%;
@@ -40,7 +40,8 @@ header nav {
 }
 header nav .logo {
   cursor: pointer;
-  margin-top: 5px;
+  margin-top: 30px;
+  transition: all 1s ease;
 }
 header nav .navBar__opciones {
   color: #D8D0D0;

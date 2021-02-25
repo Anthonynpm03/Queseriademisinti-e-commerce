@@ -1,5 +1,5 @@
 // FUNCIONES PARA SLIDESHOW
-addEventListener(`DOMContentLoaded`, ()=> {
+window.addEventListener(`DOMContentLoaded`, ()=> {
     let imagenes = ["images/banner_principal/img1.jpg", "images/banner_principal/img2.jpg", "images/banner_principal/img3.jpg", "images/banner_principal/img4.jpg", "images/banner_principal/img5.jpg" ];
 
     let indiceImagen = 1
@@ -55,6 +55,50 @@ addEventListener(`DOMContentLoaded`, ()=> {
     }
 
     setInterval(slideshow, 4000);
+
+})
+
+// FUNCION DE SCROLL PARA EL NAVBAR
+// EFECTO PARA OCULTAR CUANDO SE BAJA Y APARECER CUANDO SE SUBE
+// let ubicacionPrincipal = window.pageYOffset;
+// window.addEventListener("scroll", function(){
+//     let ubicacionActual = window.pageYOffset;
+//     let navBar = document.getElementById("header");
+
+//     if(ubicacionPrincipal >= ubicacionActual){
+//         navBar.style.top = "0px";
+//         navBar.style.backgroundColor = "black";
+//         if(ubicacionActual == 0){
+//             navBar.style.backgroundColor = "transparent";
+//         }
+//     } else {
+//         navBar.style.top = "-120px";
+        
+//     }
+
+//     ubicacionPrincipal = ubicacionActual;
+    
+// })
+
+// EFECTO NAVBAR PARA MOSTRAR DESPUES DE DEJAR DE HACER SCROLL EN AMBOS SENTIDOS
+window.addEventListener("scroll", function(){
+    let navBar = document.getElementById("header");
+    let logo = document.getElementById("logo");
+    navBar.style.top = "-120px";
+    logo.style.opacity = "0";
+    setTimeout(mostrarnavBar,500);
+
+    function mostrarnavBar(){
+        let ubicacionActual = window.pageYOffset;
+        navBar.style.top = "0px";
+
+        if(ubicacionActual != 0){
+            navBar.style.backgroundColor = "black";
+        } else {
+            navBar.style.backgroundColor = "transparent";
+            logo.style.opacity = "1";
+        }
+    }
 
 })
 

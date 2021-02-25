@@ -1,7 +1,6 @@
 header{
-    width: 95%;
-    height: 110px;
-    position: absolute;
+    width: 100%;
+    height: 80px;
     position: fixed;
     top: 0;
     left: 0;
@@ -10,13 +9,15 @@ header{
     font-size: 20px;
     font-weight: bold;
     @include flex(row, nowrap, flex-end, center);
+    transition: top 0.2s ease;
     nav{    
         width: 85%;
         padding: 10px 40px 0 0;
         @include flex(row, nowrap, space-between, center);
         .logo{
             cursor: pointer;
-            margin-top: 5px;
+            margin-top: 30px;
+            transition: all 1s ease;
         }
         .navBar__opciones{
             color: #D8D0D0;
