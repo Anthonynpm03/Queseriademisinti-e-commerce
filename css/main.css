@@ -385,6 +385,7 @@ header nav .navBar__opciones > ul .block {
   border-radius: 6px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   position: relative;
+  background-color: white;
 }
 .InstruccionesCompra .InstruccionesCompra__contenedor .instruccionesCompra i {
   color: #a00f0f;
