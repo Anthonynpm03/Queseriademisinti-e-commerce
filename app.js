@@ -91,12 +91,15 @@ window.addEventListener("scroll", function(){
     function mostrarnavBar(){
         let ubicacionActual = window.pageYOffset;
         navBar.style.top = "0px";
+        navBar.style.height = "80px"
 
         if(ubicacionActual != 0){
             navBar.style.backgroundColor = "black";
         } else {
             navBar.style.backgroundColor = "transparent";
+            navBar.style.height = "120px";
             logo.style.opacity = "1";
+            
         }
     }
 
